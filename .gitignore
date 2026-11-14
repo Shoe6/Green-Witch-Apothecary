@@ -35,6 +35,7 @@
 *.unitypackage
 *.app
 crashlytics-build.properties
+google-services.json
 
 # Firebase / Node
 firebase/functions/node_modules/
