@@ -1,0 +1,1192 @@
+{
+  "tree_maple": {
+    "item_id": "tree_maple",
+    "display_name": "Maple (Sap/Bark)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_canopy",
+    "target_ailment": "Coughs (Base Syrup)",
+    "crafting_process": "Tap trunk; boil sap in cauldron.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "coughs (base syrup)",
+      "homestead_canopy"
+    ]
+  },
+  "tree_black_walnut": {
+    "item_id": "tree_black_walnut",
+    "display_name": "Black Walnut",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_canopy",
+    "target_ailment": "Fungal Infections",
+    "crafting_process": "Grind green hulls; dark ink/wash.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "fungal infections",
+      "homestead_canopy"
+    ]
+  },
+  "tree_oak": {
+    "item_id": "tree_oak",
+    "display_name": "Oak (Bark/Acorns)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_canopy",
+    "target_ailment": "Severe Bleeding",
+    "crafting_process": "Grind bark into styptic powder.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe bleeding",
+      "homestead_canopy"
+    ]
+  },
+  "tree_pine": {
+    "item_id": "tree_pine",
+    "display_name": "Pine (Resin/Needles)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_canopy",
+    "target_ailment": "Splinters / Scurvy",
+    "crafting_process": "Tap for drawing salve; steep tea.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "splinters / scurvy",
+      "homestead_canopy"
+    ]
+  },
+  "tree_fir": {
+    "item_id": "tree_fir",
+    "display_name": "Fir (Pitch/Tips)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_canopy",
+    "target_ailment": "Chest Congestion",
+    "crafting_process": "Boil pitch; respiratory steam bath.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "chest congestion",
+      "homestead_canopy"
+    ]
+  },
+  "tree_apple": {
+    "item_id": "tree_apple",
+    "display_name": "Apple (Bark/Fruit)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_orchard",
+    "target_ailment": "Lethargy / Sludge",
+    "crafting_process": "Press cider; peel bark for tonic.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "lethargy / sludge",
+      "homestead_orchard"
+    ]
+  },
+  "tree_pear": {
+    "item_id": "tree_pear",
+    "display_name": "Pear (Wood/Fruit)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_orchard",
+    "target_ailment": "Gastric Ulcers",
+    "crafting_process": "Boil high-pectin fruit for demulcent.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "gastric ulcers",
+      "homestead_orchard"
+    ]
+  },
+  "tree_orange": {
+    "item_id": "tree_orange",
+    "display_name": "Orange (Peels)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_glasshouse",
+    "target_ailment": "Stale Air / Mood",
+    "crafting_process": "Dry peels for incense; steep blossoms.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "stale air / mood",
+      "homestead_glasshouse"
+    ]
+  },
+  "vine_grape": {
+    "item_id": "vine_grape",
+    "display_name": "Grape (Leaves)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_arbor",
+    "target_ailment": "Wound Binding",
+    "crafting_process": "Use broad leaves for sterile wraps.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "wound binding",
+      "homestead_arbor"
+    ]
+  },
+  "bush_blueberry": {
+    "item_id": "bush_blueberry",
+    "display_name": "Blueberry (Leaves)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_arbor",
+    "target_ailment": "Eye Fatigue",
+    "crafting_process": "Boil leaves for antioxidant tea.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "eye fatigue",
+      "homestead_arbor"
+    ]
+  },
+  "vine_honeysuckle": {
+    "item_id": "vine_honeysuckle",
+    "display_name": "Honeysuckle",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_arbor",
+    "target_ailment": "Harsh Medicine Taste",
+    "crafting_process": "Steep flowers to naturally sweeten.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "harsh medicine taste",
+      "homestead_arbor"
+    ]
+  },
+  "herb_chamomile": {
+    "item_id": "herb_chamomile",
+    "display_name": "Chamomile",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Insomnia",
+    "crafting_process": "Dry on racks; steep in hot water.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "insomnia",
+      "homestead_garden"
+    ]
+  },
+  "herb_lavender": {
+    "item_id": "herb_lavender",
+    "display_name": "Lavender",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Anxiety / Panic",
+    "crafting_process": "Bind with beeswax for pulse salve.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "anxiety / panic",
+      "homestead_garden"
+    ]
+  },
+  "herb_calendula": {
+    "item_id": "herb_calendula",
+    "display_name": "Calendula",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Diaper Rash / Scrapes",
+    "crafting_process": "Infuse in oil; mix with beeswax.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "diaper rash / scrapes",
+      "homestead_garden"
+    ]
+  },
+  "herb_yarrow": {
+    "item_id": "herb_yarrow",
+    "display_name": "Yarrow",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "High Fever",
+    "crafting_process": "Grind flowers; brew sweating tea.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "high fever",
+      "homestead_garden"
+    ]
+  },
+  "herb_rosemary": {
+    "item_id": "herb_rosemary",
+    "display_name": "Rosemary",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Memory Fog",
+    "crafting_process": "Burn in hearth as purifying incense.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "memory fog",
+      "homestead_garden"
+    ]
+  },
+  "herb_peppermint": {
+    "item_id": "herb_peppermint",
+    "display_name": "Peppermint",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Nausea",
+    "crafting_process": "Muddle in cold water; tincture.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "nausea",
+      "homestead_garden"
+    ]
+  },
+  "herb_thyme": {
+    "item_id": "herb_thyme",
+    "display_name": "Thyme",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Foot Fungus",
+    "crafting_process": "Boil into concentrated foot soak.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "foot fungus",
+      "homestead_garden"
+    ]
+  },
+  "herb_aloe_vera": {
+    "item_id": "herb_aloe_vera",
+    "display_name": "Aloe Vera",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Forge Burns",
+    "crafting_process": "Slice open (minigame); apply raw.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "forge burns",
+      "homestead_garden"
+    ]
+  },
+  "herb_lemon_balm": {
+    "item_id": "herb_lemon_balm",
+    "display_name": "Lemon Balm",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Nervous Exhaustion",
+    "crafting_process": "Steep fresh leaves in cool water.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "nervous exhaustion",
+      "homestead_garden"
+    ]
+  },
+  "herb_sage": {
+    "item_id": "herb_sage",
+    "display_name": "Sage",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Severe Sore Throat",
+    "crafting_process": "Dry and smoke; boil into gargle.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe sore throat",
+      "homestead_garden"
+    ]
+  },
+  "herb_comfrey": {
+    "item_id": "herb_comfrey",
+    "display_name": "Comfrey (Boneknit)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Sprains / Fractures",
+    "crafting_process": "Crush root; mix with wax for cast.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "sprains / fractures",
+      "homestead_garden"
+    ]
+  },
+  "herb_starburst_rose": {
+    "item_id": "herb_starburst_rose",
+    "display_name": "Starburst Rose Hips",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Scurvy / Malnutrition",
+    "crafting_process": "Boil in cauldron for winter syrup.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "scurvy / malnutrition",
+      "homestead_garden"
+    ]
+  },
+  "herb_cornflower": {
+    "item_id": "herb_cornflower",
+    "display_name": "Cornflower",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Eye Strain",
+    "crafting_process": "Steep petals for cool eye wash.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "eye strain",
+      "homestead_garden"
+    ]
+  },
+  "herb_holy_basil": {
+    "item_id": "herb_holy_basil",
+    "display_name": "Holy Basil (Tulsi)",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Chronic Stress",
+    "crafting_process": "Steep for adaptogenic stamina tea.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "chronic stress",
+      "homestead_garden"
+    ]
+  },
+  "herb_bee_balm": {
+    "item_id": "herb_bee_balm",
+    "display_name": "Bee Balm",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_garden",
+    "target_ailment": "Mild Infections",
+    "crafting_process": "Companion plant near apiary; boil.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "mild infections",
+      "homestead_garden"
+    ]
+  },
+  "root_potato": {
+    "item_id": "root_potato",
+    "display_name": "Potatoes",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Boils / Low Energy",
+    "crafting_process": "Mash raw for poultice; roast to eat.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "boils / low energy",
+      "homestead_rootbed"
+    ]
+  },
+  "root_carrot": {
+    "item_id": "root_carrot",
+    "display_name": "Carrots",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Night Blindness",
+    "crafting_process": "Boil into beta-carotene broth.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "night blindness",
+      "homestead_rootbed"
+    ]
+  },
+  "root_beet": {
+    "item_id": "root_beet",
+    "display_name": "Beets",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Anemia / Sluggish Liver",
+    "crafting_process": "Slow-roast or press for juice.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "anemia / sluggish liver",
+      "homestead_rootbed"
+    ]
+  },
+  "veg_tomato": {
+    "item_id": "veg_tomato",
+    "display_name": "Tomatoes",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Severe Sunburn",
+    "crafting_process": "Mash acidic flesh into cooling paste.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe sunburn",
+      "homestead_rootbed"
+    ]
+  },
+  "veg_bell_pepper": {
+    "item_id": "veg_bell_pepper",
+    "display_name": "Bell Peppers",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Poor Circulation",
+    "crafting_process": "Grind and consume to warm body.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "poor circulation",
+      "homestead_rootbed"
+    ]
+  },
+  "veg_asparagus": {
+    "item_id": "veg_asparagus",
+    "display_name": "Asparagus",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Fluid Retention",
+    "crafting_process": "Boil spears to flush kidneys.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "fluid retention",
+      "homestead_rootbed"
+    ]
+  },
+  "veg_red_cabbage": {
+    "item_id": "veg_red_cabbage",
+    "display_name": "Red Cabbage",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Deep Inflammation",
+    "crafting_process": "Press for juice to treat ulcers.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "deep inflammation",
+      "homestead_rootbed"
+    ]
+  },
+  "root_garlic": {
+    "item_id": "root_garlic",
+    "display_name": "Garlic",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_rootbed",
+    "target_ailment": "Internal Parasites",
+    "crafting_process": "Crush; combine with honey.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "internal parasites",
+      "homestead_rootbed"
+    ]
+  },
+  "apiary_honey": {
+    "item_id": "apiary_honey",
+    "display_name": "Honey",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_apiary",
+    "target_ailment": "Chronic Cough",
+    "crafting_process": "Universal syrup base/binder.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "chronic cough",
+      "homestead_apiary"
+    ]
+  },
+  "apiary_beeswax": {
+    "item_id": "apiary_beeswax",
+    "display_name": "Beeswax",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_apiary",
+    "target_ailment": "Salve Solidifier",
+    "crafting_process": "Melt in cauldron to harden oils.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "salve solidifier",
+      "homestead_apiary"
+    ]
+  },
+  "apiary_propolis": {
+    "item_id": "apiary_propolis",
+    "display_name": "Propolis",
+    "biome_group": "1. The Homestead (Cultivated & Harvested)",
+    "biome_source": "homestead_apiary",
+    "target_ailment": "Infected Wounds",
+    "crafting_process": "Apply directly as strong antibiotic.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "infected wounds",
+      "homestead_apiary"
+    ]
+  },
+  "wild_st_johns": {
+    "item_id": "wild_st_johns",
+    "display_name": "St. John’s Wort",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_sun",
+    "target_ailment": "Winter Melancholia",
+    "crafting_process": "Infuse in oil (turns bright red).",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "winter melancholia",
+      "meadow_sun"
+    ]
+  },
+  "wild_dandelion_rt": {
+    "item_id": "wild_dandelion_rt",
+    "display_name": "Dandelion Root",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_weed",
+    "target_ailment": "Jaundice / Liver",
+    "crafting_process": "Roast in hearth for coffee substitute.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "jaundice / liver",
+      "meadow_weed"
+    ]
+  },
+  "wild_dandelion_lf": {
+    "item_id": "wild_dandelion_lf",
+    "display_name": "Dandelion Leaf",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_weed",
+    "target_ailment": "Edema",
+    "crafting_process": "Eat raw or muddle into bitter tonic.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "edema",
+      "meadow_weed"
+    ]
+  },
+  "wild_plantain": {
+    "item_id": "wild_plantain",
+    "display_name": "Broadleaf Plantain",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_path",
+    "target_ailment": "Bee Stings",
+    "crafting_process": "Crush/chew for spit poultice.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "bee stings",
+      "meadow_path"
+    ]
+  },
+  "wild_mullein": {
+    "item_id": "wild_mullein",
+    "display_name": "Mullein",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_tall",
+    "target_ailment": "Deep Chest Cough",
+    "crafting_process": "Dry fuzzy leaves; steep in hot water.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "deep chest cough",
+      "meadow_tall"
+    ]
+  },
+  "wild_red_clover": {
+    "item_id": "wild_red_clover",
+    "display_name": "Red Clover",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_patch",
+    "target_ailment": "Eczema",
+    "crafting_process": "Combine with Calendula for cream.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "eczema",
+      "meadow_patch"
+    ]
+  },
+  "wild_burdock": {
+    "item_id": "wild_burdock",
+    "display_name": "Burdock Root",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_deep",
+    "target_ailment": "Gout",
+    "crafting_process": "Boil into harsh, cleansing broth.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "gout",
+      "meadow_deep"
+    ]
+  },
+  "wild_goldenrod": {
+    "item_id": "wild_goldenrod",
+    "display_name": "Goldenrod",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_late_summer",
+    "target_ailment": "Seasonal Allergies",
+    "crafting_process": "Dry yellow plumes; brew with honey.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "seasonal allergies",
+      "meadow_late_summer"
+    ]
+  },
+  "wild_milk_thistle": {
+    "item_id": "wild_milk_thistle",
+    "display_name": "Milk Thistle",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_thorny",
+    "target_ailment": "Tavern Overindulgence",
+    "crafting_process": "Grind seeds in mortar for liver prep.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "tavern overindulgence",
+      "meadow_thorny"
+    ]
+  },
+  "wild_echinacea": {
+    "item_id": "wild_echinacea",
+    "display_name": "Echinacea",
+    "biome_group": "2. The Meadow (Easy Foraging)",
+    "biome_source": "meadow_coneflower",
+    "target_ailment": "Early Cold Onset",
+    "crafting_process": "Tincture root in high-proof alcohol.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "early cold onset",
+      "meadow_coneflower"
+    ]
+  },
+  "wild_willow_bark": {
+    "item_id": "wild_willow_bark",
+    "display_name": "White Willow Bark",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_pond",
+    "target_ailment": "Migraines",
+    "crafting_process": "Requires saw; grind for salicin.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "migraines",
+      "woodland_pond"
+    ]
+  },
+  "wild_elderberry": {
+    "item_id": "wild_elderberry",
+    "display_name": "Elderberry",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_thicket",
+    "target_ailment": "Winter Flu",
+    "crafting_process": "Boil with clove/honey for antiviral.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "winter flu",
+      "woodland_thicket"
+    ]
+  },
+  "wild_nettle": {
+    "item_id": "wild_nettle",
+    "display_name": "Stinging Nettle",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_damp",
+    "target_ailment": "Severe Hay Fever",
+    "crafting_process": "Wear gloves; freeze-dry to neutralize.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe hay fever",
+      "woodland_damp"
+    ]
+  },
+  "wild_witch_hazel": {
+    "item_id": "wild_witch_hazel",
+    "display_name": "Witch Hazel",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_understory",
+    "target_ailment": "Bruises / Varicose",
+    "crafting_process": "Distill twigs in alembic for astringent.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "bruises / varicose",
+      "woodland_understory"
+    ]
+  },
+  "wild_valerian": {
+    "item_id": "wild_valerian",
+    "display_name": "Valerian Root",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_damp",
+    "target_ailment": "Severe Insomnia",
+    "crafting_process": "Tincture the pungent root.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe insomnia",
+      "woodland_damp"
+    ]
+  },
+  "wild_blackberry": {
+    "item_id": "wild_blackberry",
+    "display_name": "Blackberry Root",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_bramble",
+    "target_ailment": "Dysentery",
+    "crafting_process": "Boil roots for high-tannin astringency.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "dysentery",
+      "woodland_bramble"
+    ]
+  },
+  "wild_chaga": {
+    "item_id": "wild_chaga",
+    "display_name": "Chaga Mushroom",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_birch",
+    "target_ailment": "Systemic Fatigue",
+    "crafting_process": "Slow-simmer for immune-boosting tea.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "systemic fatigue",
+      "woodland_birch"
+    ]
+  },
+  "wild_hawthorn": {
+    "item_id": "wild_hawthorn",
+    "display_name": "Hawthorn Berry",
+    "biome_group": "3. The Woodland Edge (Mid-Game Foraging)",
+    "biome_source": "woodland_thorny",
+    "target_ailment": "Heart Palpitations",
+    "crafting_process": "Simmer into a heart-tonic syrup.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "heart palpitations",
+      "woodland_thorny"
+    ]
+  },
+  "bog_peat_moss": {
+    "item_id": "bog_peat_moss",
+    "display_name": "Peat Moss",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_edge",
+    "target_ailment": "Soil pH / Wounds",
+    "crafting_process": "Use as sterile wound packing.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "soil ph / wounds",
+      "bog_edge"
+    ]
+  },
+  "bog_cranberry": {
+    "item_id": "bog_cranberry",
+    "display_name": "Cranberry",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_shallow",
+    "target_ailment": "Bladder Infections",
+    "crafting_process": "Press in mortar for tart juice.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "bladder infections",
+      "bog_shallow"
+    ]
+  },
+  "bog_boneset": {
+    "item_id": "bog_boneset",
+    "display_name": "Boneset",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_damp",
+    "target_ailment": "Intense Chills",
+    "crafting_process": "Combine with peppermint to mask taste.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "intense chills",
+      "bog_damp"
+    ]
+  },
+  "bog_marshmallow": {
+    "item_id": "bog_marshmallow",
+    "display_name": "Marshmallow Root",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_deep_mud",
+    "target_ailment": "Severe Heartburn",
+    "crafting_process": "Dig with badger; boil for mucilage.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe heartburn",
+      "bog_deep_mud"
+    ]
+  },
+  "bog_meadowsweet": {
+    "item_id": "bog_meadowsweet",
+    "display_name": "Meadowsweet",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_grasses",
+    "target_ailment": "Joint Inflammation",
+    "crafting_process": "Extract salicylic acid; gentle on stomach.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "joint inflammation",
+      "bog_grasses"
+    ]
+  },
+  "bog_calamus": {
+    "item_id": "bog_calamus",
+    "display_name": "Calamus (Sweetflag)",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_reeds",
+    "target_ailment": "Toothache / Gums",
+    "crafting_process": "Chew aromatic root to numb pain.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "toothache / gums",
+      "bog_reeds"
+    ]
+  },
+  "bog_sphagnum": {
+    "item_id": "bog_sphagnum",
+    "display_name": "Sphagnum",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_surface",
+    "target_ailment": "Fragile Transport",
+    "crafting_process": "UI mechanic: pack delicate reagents.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "fragile transport",
+      "bog_surface"
+    ]
+  },
+  "bog_blue_flag": {
+    "item_id": "bog_blue_flag",
+    "display_name": "Blue Flag Iris",
+    "biome_group": "4. The Peat Bog (Hazardous Wetlands)",
+    "biome_source": "bog_margin",
+    "target_ailment": "Severe Constipation",
+    "crafting_process": "Process carefully as a purgative.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "severe constipation",
+      "bog_margin"
+    ]
+  },
+  "crag_arnica": {
+    "item_id": "crag_arnica",
+    "display_name": "Arnica",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_cliff",
+    "target_ailment": "Blunt Force Trauma",
+    "crafting_process": "Toxic raw. Distill into sports rub.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "blunt force trauma",
+      "crag_cliff"
+    ]
+  },
+  "crag_alpine_rose": {
+    "item_id": "crag_alpine_rose",
+    "display_name": "Alpine Rose",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_snowline",
+    "target_ailment": "Premature Aging",
+    "crafting_process": "Infuse with milk/wax for luxury cream.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "premature aging",
+      "crag_snowline"
+    ]
+  },
+  "crag_gentian": {
+    "item_id": "crag_gentian",
+    "display_name": "Gentian Root",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_rocky",
+    "target_ailment": "Wasting Sickness",
+    "crafting_process": "Extract intense bitters to jumpstart gut.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "wasting sickness",
+      "crag_rocky"
+    ]
+  },
+  "crag_iceland_moss": {
+    "item_id": "crag_iceland_moss",
+    "display_name": "Iceland Moss",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_boulder",
+    "target_ailment": "Chronic Dry Cough",
+    "crafting_process": "Boil lichen into lung-coating jelly.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "chronic dry cough",
+      "crag_boulder"
+    ]
+  },
+  "crag_juniper": {
+    "item_id": "crag_juniper",
+    "display_name": "Juniper Berries",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_scrub",
+    "target_ailment": "Kidney Sluggishness",
+    "crafting_process": "Crush for tonic; burn to purify air.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "kidney sluggishness",
+      "crag_scrub"
+    ]
+  },
+  "crag_rhodiola": {
+    "item_id": "crag_rhodiola",
+    "display_name": "Rhodiola Rosea",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_crevasse",
+    "target_ailment": "Extreme Exhaustion",
+    "crafting_process": "Adaptogen; massive player stamina refill.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "extreme exhaustion",
+      "crag_crevasse"
+    ]
+  },
+  "crag_edelweiss": {
+    "item_id": "crag_edelweiss",
+    "display_name": "Edelweiss",
+    "biome_group": "5. The Alpine Crag (Late-Game & Noble Requests)",
+    "biome_source": "crag_peak",
+    "target_ailment": "UV / Sun-Poisoning",
+    "crafting_process": "Blend with Aloe/Calendula for rescue.",
+    "state_modifiers": [
+      "fresh",
+      "dried"
+    ],
+    "pH_Value": "neutral",
+    "crafting_tags": [
+      "uv / sun-poisoning",
+      "crag_peak"
+    ]
+  }
+}

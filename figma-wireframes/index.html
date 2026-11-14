@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Green Witch's Apothecary — Phase 1 UI Wireframes</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Nunito:wght@600;700&display=swap');
+
+    :root {
+      --bg-desk: #1f1914;
+      --leather-dark: #3b2314;
+      --leather-mid: #5a3721;
+      --leather-light: #7a4e32;
+      --parchment: #f4e8cf;
+      --parchment-edge: #dec79b;
+      --ink: #2c2018;
+      --ink-muted: #6e5a49;
+      --sage: #5c7c54;
+      --gold: #e6b84d;
+      --wax-red: #8c2222;
+      --canvas: #d9ccb4;
+      --canvas-stitch: #8c785b;
+      --wood: #6e4526;
+      --wood-dark: #4a2c15;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: radial-gradient(circle at top, #2e241b 0%, #16110d 100%);
+      color: #f6eedc;
+      min-height: 100vh;
+      padding: 28px 24px 60px;
+    }
+
+    header {
+      max-width: 1440px;
+      margin: 0 auto 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(222, 199, 155, 0.22);
+      padding-bottom: 16px;
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      letter-spacing: 0.4px;
+      color: var(--parchment);
+    }
+
+    header p {
+      font-size: 13px;
+      color: #c2b39c;
+    }
+
+    .board {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+      gap: 28px;
+    }
+
+    .screen-card {
+      background: rgba(255, 248, 232, 0.04);
+      border: 1px solid rgba(222, 199, 155, 0.18);
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .screen-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .screen-meta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--gold);
+    }
+
+    .screen-meta span {
+      font-size: 12px;
+      color: #b0a089;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    /* Mobile Landscape Viewport (16:9 / ~844x390 ratio) */
+    .mobile-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 844 / 390;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 6px solid #120e0b;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+      background: #273222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------------- 1. GRANDMOTHER'S TOME ---------------- */
+    .tome-bg {
+      background: radial-gradient(circle at center, #33291e 0%, #1a140e 100%);
+    }
+
+    .tome-cover {
+      position: relative;
+      width: 86%;
+      height: 86%;
+      background: linear-gradient(135deg, var(--leather-mid), var(--leather-dark));
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: inset 0 0 0 2px #8d6140, 0 12px 24px rgba(0, 0, 0, 0.6);
+      display: flex;
+    }
+
+    .tome-pages {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--parchment);
+      border-radius: 6px;
+      box-shadow: inset 0 0 22px rgba(124, 92, 48, 0.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tome-pages::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0; left: 50%;
+      width: 18px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, rgba(90, 55, 33, 0.05), rgba(60, 35, 18, 0.28), rgba(90, 55, 33, 0.05));
+      pointer-events: none;
+    }
+
+    .tome-page {
+      padding: 16px 20px;
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .tome-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px dashed rgba(44, 32, 24, 0.25);
+      padding-bottom: 4px;
+    }
+
+    .tome-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .tome-subtitle {
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .yarrow-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 10px;
+      align-items: center;
+      flex: 1;
+    }
+
+    .charcoal-box {
+      border: 1px solid rgba(44, 32, 24, 0.18);
+      border-radius: 6px;
+      background: rgba(222, 199, 155, 0.25);
+      padding: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .cursive-notes {
+      font-family: 'Caveat', cursive;
+      font-size: 15px;
+      line-height: 1.25;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .note-pill {
+      background: rgba(92, 124, 84, 0.12);
+      border-left: 3px solid var(--sage);
+      padding: 4px 8px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .note-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--ink-muted);
+      display: block;
+    }
+
+    .locked-slot {
+      border: 1.5px dashed rgba(44, 32, 24, 0.32);
+      border-radius: 8px;
+      padding: 10px 12px;
+      background: rgba(205, 180, 136, 0.22);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lock-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(44, 32, 24, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 14px;
+    }
+
+    .locked-slot h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--ink);
+    }
+
+    .locked-slot p {
+      font-family: 'Caveat', cursive;
+      font-size: 14px;
+      color: var(--ink-muted);
+    }
+
+    .tome-tabs {
+      position: absolute;
+      right: -34px;
+      top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .tome-tab {
+      background: #c79f62;
+      color: var(--ink);
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 6px 12px 6px 10px;
+      border-radius: 0 8px 8px 0;
+      border: 1.5px solid #6b4c28;
+      border-left: none;
+      box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .tome-tab.active {
+      background: var(--parchment);
+      transform: translateX(4px);
+    }
+
+    /* ---------------- 2. RADIAL TOOL WHEEL ---------------- */
+    .grid-backdrop {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #4b623f 0%, #33452a 60%, #24301f 100%);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+      padding: 24px 80px;
+      opacity: 0.9;
+    }
+
+    .soil-square {
+      background: rgba(102, 74, 46, 0.62);
+      border: 2px solid rgba(173, 137, 94, 0.35);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: rgba(244, 232, 207, 0.55);
+    }
+
+    .wheel-overlay {
+      position: relative;
+      z-index: 2;
+      width: 240px;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, rgba(20, 15, 10, 0.38) 0%, rgba(20, 15, 10, 0.05) 72%, transparent 100%);
+      border-radius: 50%;
+    }
+
+    .wheel-sector {
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(59, 35, 20, 0.84);
+      border: 2px solid rgba(155, 110, 70, 0.65);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      color: var(--parchment);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .wheel-sector span {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-align: center;
+      line-height: 1.05;
+    }
+
+    .wheel-sector.selected {
+      background: rgba(94, 58, 30, 0.96);
+      border-color: var(--gold);
+      box-shadow: 0 0 20px rgba(230, 184, 77, 0.85), inset 0 0 10px rgba(230, 184, 77, 0.45);
+      transform: scale(1.08);
+    }
+
+    .pos-top    { top: 10px; left: 50%; transform: translateX(-50%); }
+    .pos-top.selected { transform: translateX(-50%) scale(1.08); }
+    .pos-right  { right: 10px; top: 50%; transform: translateY(-50%); }
+    .pos-right.selected { transform: translateY(-50%) scale(1.08); }
+    .pos-bottom { bottom: 10px; left: 50%; transform: translateX(-50%); }
+    .pos-bottom.selected { transform: translateX(-50%) scale(1.08); }
+    .pos-left   { left: 10px; top: 50%; transform: translateY(-50%); }
+    .pos-left.selected { transform: translateY(-50%) scale(1.08); }
+
+    .wheel-hub {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(34, 23, 15, 0.86);
+      border: 2px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    }
+
+    .wheel-hub small {
+      font-size: 8px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .wheel-hub strong {
+      font-size: 10px;
+      color: var(--parchment);
+      line-height: 1.15;
+    }
+
+    /* ---------------- 3. THE RUCKSACK ---------------- */
+    .rucksack-bg {
+      background: linear-gradient(160deg, rgba(38, 49, 32, 0.92), rgba(24, 29, 21, 0.96));
+    }
+
+    .rucksack-panel {
+      width: 76%;
+      height: 82%;
+      background: linear-gradient(180deg, #dfd2ba 0%, #cfc0a3 100%);
+      border-radius: 14px;
+      border: 3px solid #6b563b;
+      padding: 12px 16px;
+      position: relative;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), inset 0 0 0 4px #dfd2ba, inset 0 0 0 6px rgba(107, 86, 59, 0.45);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rucksack-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px dashed rgba(107, 86, 59, 0.45);
+      padding-bottom: 6px;
+    }
+
+    .rucksack-header h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .brass-clasp {
+      background: linear-gradient(180deg, #e7c267 0%, #b4832c 100%);
+      border: 2px solid #694912;
+      color: #2b1d07;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+    }
+
+    .rucksack-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 8px;
+      flex: 1;
+    }
+
+    .inv-slot {
+      background: rgba(114, 93, 66, 0.18);
+      border: 1.5px dashed rgba(107, 86, 59, 0.55);
+      border-radius: 8px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px;
+      text-align: center;
+    }
+
+    .inv-slot.filled {
+      background: rgba(244, 232, 207, 0.72);
+      border-style: solid;
+      border-color: #8b7352;
+      cursor: grab;
+    }
+
+    .qty-badge {
+      position: absolute;
+      bottom: 3px;
+      right: 5px;
+      font-size: 10px;
+      font-weight: 800;
+      color: #2b1d0e;
+      background: rgba(230, 184, 77, 0.45);
+      padding: 0 4px;
+      border-radius: 4px;
+    }
+
+    /* ---------------- 4. GUILD AD FLYER ---------------- */
+    .flyer-bg {
+      background: radial-gradient(circle at center, rgba(44, 58, 37, 0.85), rgba(18, 22, 16, 0.96));
+    }
+
+    .crow-stage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .crow-talons {
+      margin-bottom: -10px;
+      z-index: 3;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+    }
+
+    .guild-flyer {
+      width: 340px;
+      background: linear-gradient(180deg, #f3e4c3 0%, #e1ca9a 100%);
+      color: var(--ink);
+      border: 2px solid #96784b;
+      border-radius: 8px;
+      padding: 18px 22px 16px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      position: relative;
+    }
+
+    .guild-crest {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      color: #6c5132;
+      margin-bottom: 4px;
+    }
+
+    .guild-flyer p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .wax-seal {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #b83333, var(--wax-red));
+      border: 2px solid #591111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f6dcb2;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .flyer-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .wood-btn {
+      background: linear-gradient(180deg, #835531 0%, var(--wood-dark) 100%);
+      color: #f7ebd2;
+      border: 2px solid #2e1909;
+      border-radius: 6px;
+      padding: 7px 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      font-weight: 700;
+      box-shadow: 0 3px 0 #261407, 0 4px 8px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+    }
+
+    .wood-btn.secondary {
+      background: linear-gradient(180deg, #68513c 0%, #463628 100%);
+      color: #ddd0ba;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>The Green Witch's Apothecary — Phase 1 UI Wireframes</h1>
+      <p>Diegetic Mobile Landscape Layouts: Grandmother's Tome · Radial Tool Wheel · Rucksack · Guild Ad Flyer</p>
+    </div>
+    <p>Leaf &amp; Logic Studios · Sprint 1</p>
+  </header>
+
+  <main class="board">
+    <!-- 1. THE GRANDMOTHER'S TOME -->
+    <section class="screen-card">
+      <div class="screen-meta">
+        <h2>1. The Grandmother's Tome (Herbal Grimoire)</h2>
+        <span>Mobile Landscape</span>
+      </div>
+      <div class="mobile-frame tome-bg">
+        <div class="tome-cover">
+          <div class="tome-pages">
+            <!-- Left Page -->
+            <div class="tome-page">
+              <div class="tome-header">
+                <span class="tome-title">The Grandmother's Tome</span>
+                <span class="tome-subtitle">Yarrow · Achillea</span>
+              </div>
+              <div class="yarrow-layout">
+                <div class="charcoal-box">
+                  <svg viewBox="0 0 120 130" width="94" height="104" aria-label="Charcoal sketch of Yarrow">
+                    <g fill="none" stroke="#2d241e" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M60 122 C59 95 62 66 60 38" stroke-width="2.4" />
+                      <!-- Feathery leaves -->
+                      <path d="M60 104 C44 98 34 94 26 98 M46 99 L38 90 M36 96 L30 88" stroke-width="1.4" />
+                      <path d="M60 88 C75 82 86 78 94 82 M73 83 L80 74 M83 80 L89 72" stroke-width="1.4" />
+                      <path d="M60 72 C46 66 37 64 31 68 M48 67 L42 59" stroke-width="1.4" />
+                      <!-- Umbel flower clusters -->
+                      <path d="M60 40 L40 24 M60 40 L60 19 M60 40 L80 25" stroke-width="1.6" />
+                      <circle cx="38" cy="22" r="5" stroke-width="1.3" />
+                      <circle cx="46" cy="18" r="4" stroke-width="1.3" />
+                      <circle cx="57" cy="15" r="5" stroke-width="1.3" />
+                      <circle cx="67" cy="17" r="4.5" stroke-width="1.3" />
+                      <circle cx="78" cy="21" r="5" stroke-width="1.3" />
+                      <circle cx="84" cy="27" r="3.5" stroke-width="1.2" />
+                    </g>
+                  </svg>
+                  <span style="font-family:'Caveat',cursive;font-size:12px;color:#5a4938;">Charcoal Study — Yarrow</span>
+                </div>
+                <div class="cursive-notes">
+                  <div class="note-pill">
+                    <span class="note-label">Sunlight</span>
+                    Full Sun (Open Meadow Edge)
+                  </div>
+                  <div class="note-pill">
+                    <span class="note-label">Soil pH</span>
+                    Neutral (6.0 – 7.0)
+                  </div>
+                </div>
+              </div>
+              <div style="font-family:'Caveat',cursive;font-size:12px;color:#6e5a49;">p. 14 · Homestead &amp; Meadow Flora</div>
+            </div>
+
+            <!-- Right Page -->
+            <div class="tome-page">
+              <div class="tome-header">
+                <span class="tome-title">Field Discoveries</span>
+                <span class="tome-subtitle">herb_yarrow</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;margin:auto 0;">
+                <div class="locked-slot">
+                  <div class="lock-badge">&#128274;</div>
+                  <div>
+                    <h4>Preparation</h4>
+                    <p>Locked — Experiment at workbench to record</p>
+                  </div>
+                </div>
+                <div class="locked-slot">
+                  <div class="lock-badge">&#128274;</div>
+                  <div>
+                    <h4>Medicinal Effect</h4>
+                    <p>Locked — Fulfill villager remedy to unlock</p>
+                  </div>
+                </div>
+              </div>
+              <div style="font-family:'Caveat',cursive;font-size:12px;color:#6e5a49;text-align:right;">p. 15</div>
+            </div>
+          </div>
+
+          <div class="tome-tabs">
+            <button class="tome-tab active">Reagents</button>
+            <button class="tome-tab">Recipes</button>
+            <button class="tome-tab">Orders</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THE RADIAL TOOL WHEEL -->
+    <section class="screen-card">
+      <div class="screen-meta">
+        <h2>2. The Radial Tool Wheel</h2>
+        <span>Hold-and-Swipe · Transparent 3x3 Grid</span>
+      </div>
+      <div class="mobile-frame">
+        <div class="grid-backdrop">
+          <div class="soil-square">Plot 1,1</div>
+          <div class="soil-square">Plot 1,2</div>
+          <div class="soil-square">Plot 1,3</div>
+          <div class="soil-square">Plot 2,1</div>
+          <div class="soil-square">Plot 2,2</div>
+          <div class="soil-square">Plot 2,3</div>
+          <div class="soil-square">Plot 3,1</div>
+          <div class="soil-square">Plot 3,2</div>
+          <div class="soil-square">Plot 3,3</div>
+        </div>
+
+        <div class="wheel-overlay" id="radialWheel">
+          <!-- Braided leather outer ring -->
+          <svg viewBox="0 0 240 240" width="240" height="240" style="position:absolute;inset:0;pointer-events:none;">
+            <circle cx="120" cy="120" r="102" fill="none" stroke="rgba(74,44,22,0.85)" stroke-width="14" />
+            <circle cx="120" cy="120" r="102" fill="none" stroke="#9e6d43" stroke-width="4" stroke-dasharray="8 6" />
+            <circle cx="120" cy="120" r="95" fill="none" stroke="rgba(230,184,77,0.35)" stroke-width="1.5" />
+          </svg>
+
+          <button class="wheel-sector pos-top selected" data-tool="Hand Snips">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="18" r="2.5"/><circle cx="14" cy="18" r="2.5"/>
+              <path d="M7.5 16 L15 4 M12.5 16 L7 4"/>
+            </svg>
+            <span>Hand Snips</span>
+          </button>
+
+          <button class="wheel-sector pos-right" data-tool="Heavy Loppers">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 20 L13 9 M20 20 L11 9 M10 9 C10 4 14 4 14 9"/>
+            </svg>
+            <span>Heavy Loppers</span>
+          </button>
+
+          <button class="wheel-sector pos-bottom" data-tool="Canvas Hose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 17 C5 11 15 15 15 8 L19 6"/>
+              <path d="M19 9 L21 11 M17 10 L18 13"/>
+            </svg>
+            <span>Canvas Hose</span>
+          </button>
+
+          <button class="wheel-sector pos-left" data-tool="Hand Trowel">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 19 L11 13 M11 13 L19 5 L15 15 Z"/>
+            </svg>
+            <span>Hand Trowel</span>
+          </button>
+
+          <div class="wheel-hub">
+            <small>Equipped</small>
+            <strong id="selectedToolLabel">Hand Snips</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE RUCKSACK -->
+    <section class="screen-card">
+      <div class="screen-meta">
+        <h2>3. The Rucksack (Drag-and-Drop Inventory)</h2>
+        <span>Stitched Canvas · Auto-Stacking</span>
+      </div>
+      <div class="mobile-frame rucksack-bg">
+        <div class="rucksack-panel">
+          <div class="rucksack-header">
+            <h3>Rucksack (Tier 3 · 18 Slots)</h3>
+            <button class="brass-clasp" id="autoSortBtn" title="Alphabetize &amp; stack">
+              <span>&#9881;</span> Auto-Sort
+            </button>
+          </div>
+          <div class="rucksack-grid" id="rucksackGrid">
+            <div class="inv-slot filled" draggable="true">
+              <span>&#127804;</span>
+              <span>Chamomile Sprigs</span>
+              <span class="qty-badge">x15</span>
+            </div>
+            <div class="inv-slot filled" draggable="true">
+              <span>&#129716;</span>
+              <span>Lavender Buds</span>
+              <span class="qty-badge">x6</span>
+            </div>
+            <div class="inv-slot filled" draggable="true">
+              <span>&#127807;</span>
+              <span>Aloe Vera</span>
+              <span class="qty-badge">x3</span>
+            </div>
+            <div class="inv-slot filled" draggable="true">
+              <span>&#127810;</span>
+              <span>Yarrow</span>
+              <span class="qty-badge">x4</span>
+            </div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+            <div class="inv-slot"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DIEGETIC GUILD AD FLYER -->
+    <section class="screen-card">
+      <div class="screen-meta">
+        <h2>4. Diegetic Ad Prompt (Guild Ad Flyer)</h2>
+        <span>Crow Familiar · Rewarded Stipend</span>
+      </div>
+      <div class="mobile-frame flyer-bg">
+        <div class="crow-stage">
+          <!-- Crow Talons gripping top of flyer -->
+          <svg class="crow-talons" width="130" height="42" viewBox="0 0 130 42" aria-label="Crow talons holding parchment">
+            <path d="M38 4 C40 18 35 28 30 34 M45 4 C46 18 46 28 45 36 M52 4 C51 18 55 28 59 33" stroke="#18181b" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M76 4 C74 18 70 28 66 33 M83 4 C84 18 84 28 85 36 M90 4 C90 18 95 28 100 34" stroke="#18181b" stroke-width="5" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="guild-flyer">
+            <div class="wax-seal">G</div>
+            <div class="guild-crest">Capital City Guilds · Post</div>
+            <p>Read the Guild's missive for a 20 Coin stipend?</p>
+            <div class="flyer-actions">
+              <button class="wood-btn">Read</button>
+              <button class="wood-btn secondary">Dismiss</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Interactive tool wheel selection preview
+    const sectors = document.querySelectorAll('.wheel-sector');
+    const label = document.getElementById('selectedToolLabel');
+    sectors.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        sectors.forEach((s) => s.classList.remove('selected'));
+        btn.classList.add('selected');
+        label.textContent = btn.dataset.tool;
+      });
+    });
+
+    // Tome tab toggle preview
+    const tabs = document.querySelectorAll('.tome-tab');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((t) => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

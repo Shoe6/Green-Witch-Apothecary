@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "reagents": {
+      ".read": "auth != null",
+      ".write": false
+    },
+    "recipes": {
+      ".read": "auth != null",
+      ".write": false
+    },
+    "players": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    }
+  }
+}

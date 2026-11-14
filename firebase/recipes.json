@@ -1,0 +1,52 @@
+{
+  "weavers_rest_draught": {
+    "recipe_id": "weavers_rest_draught",
+    "display_name": "The Weaver's Rest Draught",
+    "category": "Potions, Tinctures & Teas",
+    "reagents": [
+      "herb_chamomile",
+      "herb_lavender"
+    ],
+    "required_tags": [
+      "insomnia",
+      "anxiety / panic"
+    ],
+    "process": "Simmered in a hearth cauldron with purified spring water.",
+    "effect": "A gentle liquid nervine used to soothe an overactive mind, calm restless villagers, and invite peaceful sleep.",
+    "unlocked_by_default": true
+  },
+  "st_johns_ease_balm": {
+    "recipe_id": "st_johns_ease_balm",
+    "display_name": "St. John's Ease Soothing Balm",
+    "category": "Salves, Creams & Oils",
+    "reagents": [
+      "herb_aloe_vera",
+      "herb_peppermint",
+      "apiary_beeswax"
+    ],
+    "required_tags": [
+      "forge burns",
+      "nausea",
+      "salve solidifier"
+    ],
+    "process": "Gently melted and infused over low hearth heat, then poured into tins to set.",
+    "effect": "A cooling, tactile balm used by field workers and kitchen hands to relieve minor burns, sunburns, and skin inflammation.",
+    "unlocked_by_default": true
+  },
+  "morning_hearth_smoke": {
+    "recipe_id": "morning_hearth_smoke",
+    "display_name": "Morning Hearth Cleansing Smoke",
+    "category": "Incense, Satchets & Blessings",
+    "reagents": [
+      "tree_orange",
+      "tree_pine"
+    ],
+    "required_tags": [
+      "stale air / mood",
+      "splinters / scurvy"
+    ],
+    "process": "Chopped, dried, bound, and rolled with melted tree pitch into a slow-burning smudge bundle.",
+    "effect": "A warm, aromatic smoke used to clear stagnant cottage air, welcome visitors, and provide a mental energy boost.",
+    "unlocked_by_default": true
+  }
+}
