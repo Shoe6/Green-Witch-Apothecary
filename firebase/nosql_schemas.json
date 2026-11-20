@@ -1,0 +1,127 @@
+{
+  "players": {
+    "demo_witch_uid": {
+      "users": {
+        "user_id": "demo_witch_uid",
+        "gold": 100,
+        "stamina": 100,
+        "backpack_tier": "Satchel",
+        "unlocked_biomes": [
+          "Homestead",
+          "Meadows"
+        ]
+      },
+      "world_state": {
+        "world_seed": "GWA-SPRING-0001",
+        "current_season": "Spring",
+        "current_weather": "Clear",
+        "global_timestamp": 1732142080000
+      },
+      "inventories": {
+        "backpack": [
+          {
+            "item_id": "herb_chamomile",
+            "quantity": 3,
+            "quality": "Standard"
+          },
+          {
+            "item_id": "herb_lavender",
+            "quantity": 2,
+            "quality": "Fine"
+          }
+        ],
+        "storage_chest": [
+          {
+            "item_id": "apiary_beeswax",
+            "quantity": 5,
+            "quality": "Standard"
+          }
+        ],
+        "icebox": {
+          "decay_paused": true,
+          "items": [
+            {
+              "item_id": "herb_aloe_vera",
+              "quantity": 2,
+              "quality": "Masterwork"
+            }
+          ]
+        }
+      },
+      "garden_plots": {
+        "A1": {
+          "plot_id": "A1",
+          "planted_seed": "herb_chamomile",
+          "soil_ph": 6.5,
+          "hydration_state": true,
+          "death_timer_timestamp": 1732228480000
+        },
+        "B2": {
+          "plot_id": "B2",
+          "planted_seed": "herb_yarrow",
+          "soil_ph": 6.8,
+          "hydration_state": true,
+          "death_timer_timestamp": 1732228480000
+        }
+      },
+      "workstations": {
+        "stove_slot_1": {
+          "workstation_id": "stove_slot_1",
+          "workstation_type": "Small Woodstove",
+          "active_recipe": "weavers_rest_draught",
+          "completion_timestamp": 1732145680000,
+          "ash_level": 2,
+          "ash_capacity": 10
+        },
+        "drying_rack_1": {
+          "workstation_id": "drying_rack_1",
+          "workstation_type": "Drying Rack",
+          "active_recipe": "morning_hearth_smoke",
+          "completion_timestamp": 1732149280000,
+          "ash_level": 0,
+          "ash_capacity": 0
+        }
+      },
+      "companions": {
+        "Crow": {
+          "companion_id": "Crow",
+          "affinity_level": 1,
+          "deployment_status": "Idle",
+          "target_biome": "Meadows",
+          "return_timestamp": 0
+        },
+        "Squirrel": {
+          "companion_id": "Squirrel",
+          "affinity_level": 1,
+          "deployment_status": "Idle",
+          "target_biome": "Homestead",
+          "return_timestamp": 0
+        },
+        "Badger": {
+          "companion_id": "Badger",
+          "affinity_level": 1,
+          "deployment_status": "Idle",
+          "target_biome": "Meadows",
+          "return_timestamp": 0
+        }
+      },
+      "economy_and_karma": {
+        "village_karma": 0,
+        "merchants_guild_rep": 0,
+        "active_contracts": [
+          {
+            "contract_id": "contract_miller_01",
+            "target_faction": "Village",
+            "requested_items": [
+              {
+                "item_id": "weavers_rest_draught",
+                "quantity": 1
+              }
+            ],
+            "expiration_timestamp": 1732314880000
+          }
+        ]
+      }
+    }
+  }
+}

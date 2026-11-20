@@ -8,10 +8,123 @@
       ".read": "auth != null",
       ".write": false
     },
+    "world_state": {
+      ".read": "auth != null",
+      ".write": false
+    },
     "players": {
       "$uid": {
         ".read": "auth != null && auth.uid === $uid",
-        ".write": "auth != null && auth.uid === $uid"
+        ".write": "auth != null && auth.uid === $uid",
+        "users": {
+          ".validate": "newData.hasChildren(['user_id', 'gold', 'stamina', 'backpack_tier', 'unlocked_biomes'])",
+          "user_id": {
+            ".validate": "newData.isString() && newData.val() === $uid"
+          },
+          "gold": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          },
+          "stamina": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+          },
+          "backpack_tier": {
+            ".validate": "newData.isString() && (newData.val() === 'Satchel' || newData.val() === 'Medium Rucksack' || newData.val() === 'Large Expedition Backpack')"
+          }
+        },
+        "world_state": {
+          ".validate": "newData.hasChildren(['world_seed', 'current_season', 'current_weather', 'global_timestamp'])",
+          "world_seed": {
+            ".validate": "newData.isString()"
+          },
+          "current_season": {
+            ".validate": "newData.isString() && (newData.val() === 'Spring' || newData.val() === 'Summer' || newData.val() === 'Autumn' || newData.val() === 'Winter')"
+          },
+          "current_weather": {
+            ".validate": "newData.isString() && (newData.val() === 'Clear' || newData.val() === 'Rain' || newData.val() === 'Fog' || newData.val() === 'Heatwave')"
+          },
+          "global_timestamp": {
+            ".validate": "newData.isNumber() && newData.val() >= 0"
+          }
+        },
+        "inventories": {
+          "icebox": {
+            "decay_paused": {
+              ".validate": "newData.isBoolean() && newData.val() === true"
+            }
+          }
+        },
+        "garden_plots": {
+          "$plot_id": {
+            ".validate": "newData.hasChildren(['plot_id', 'planted_seed', 'soil_ph', 'hydration_state', 'death_timer_timestamp'])",
+            "plot_id": {
+              ".validate": "newData.isString() && newData.val() === $plot_id"
+            },
+            "planted_seed": {
+              ".validate": "newData.isString()"
+            },
+            "soil_ph": {
+              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 14"
+            },
+            "hydration_state": {
+              ".validate": "newData.isBoolean()"
+            },
+            "death_timer_timestamp": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            }
+          }
+        },
+        "workstations": {
+          "$workstation_id": {
+            ".validate": "newData.hasChildren(['workstation_id', 'workstation_type', 'active_recipe', 'completion_timestamp', 'ash_level', 'ash_capacity'])",
+            "workstation_id": {
+              ".validate": "newData.isString() && newData.val() === $workstation_id"
+            },
+            "workstation_type": {
+              ".validate": "newData.isString() && (newData.val() === 'Small Woodstove' || newData.val() === 'Medium Woodstove' || newData.val() === 'Large Woodstove' || newData.val() === 'Distiller' || newData.val() === 'Drying Rack')"
+            },
+            "active_recipe": {
+              ".validate": "newData.isString()"
+            },
+            "completion_timestamp": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "ash_level": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            },
+            "ash_capacity": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            }
+          }
+        },
+        "companions": {
+          "$companion_id": {
+            ".validate": "newData.hasChildren(['companion_id', 'affinity_level', 'deployment_status', 'target_biome', 'return_timestamp'])",
+            "companion_id": {
+              ".validate": "newData.isString() && (newData.val() === 'Crow' || newData.val() === 'Squirrel' || newData.val() === 'Badger')"
+            },
+            "affinity_level": {
+              ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 100"
+            },
+            "deployment_status": {
+              ".validate": "newData.isString() && (newData.val() === 'Idle' || newData.val() === 'Foraging')"
+            },
+            "target_biome": {
+              ".validate": "newData.isString()"
+            },
+            "return_timestamp": {
+              ".validate": "newData.isNumber() && newData.val() >= 0"
+            }
+          }
+        },
+        "economy_and_karma": {
+          ".validate": "newData.hasChildren(['village_karma', 'merchants_guild_rep'])",
+          "village_karma": {
+            ".validate": "newData.isNumber() && newData.val() >= -100 && newData.val() <= 100"
+          },
+          "merchants_guild_rep": {
+            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 100"
+          }
+        }
       }
     }
   }
