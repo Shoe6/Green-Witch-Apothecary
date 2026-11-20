@@ -1,0 +1,52 @@
+name: Deploy Firebase RTDB Rules & Cloud Functions
+
+on:
+  push:
+    branches:
+      - Main
+  workflow_dispatch:
+
+jobs:
+  deploy-firebase:
+    name: Test & Deploy to green-witch-apothecary
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: firebase/functions/package-lock.json
+
+      - name: Install Cloud Functions dependencies
+        working-directory: firebase/functions
+        run: npm ci
+
+      - name: Run AFK & 7 NoSQL Schema unit tests
+        working-directory: firebase/functions
+        run: node test.js
+
+      - name: Configure Firebase Service Account credentials
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$FIREBASE_SERVICE_ACCOUNT" ]; then
+            echo "::error::Missing FIREBASE_SERVICE_ACCOUNT secret in GitHub repository settings."
+            exit 1
+          fi
+          CRED_PATH="$RUNNER_TEMP/firebase-service-account.json"
+          printf '%s' "$FIREBASE_SERVICE_ACCOUNT" > "$CRED_PATH"
+          chmod 600 "$CRED_PATH"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$CRED_PATH" >> "$GITHUB_ENV"
+
+      - name: Deploy RTDB Rules & Cloud Functions to Firebase
+        working-directory: firebase
+        run: npx --yes firebase-tools@latest deploy --project green-witch-apothecary --only database,functions --non-interactive
+
+      - name: Clean up temporary credentials
+        if: always()
+        run: rm -f "$RUNNER_TEMP/firebase-service-account.json"
